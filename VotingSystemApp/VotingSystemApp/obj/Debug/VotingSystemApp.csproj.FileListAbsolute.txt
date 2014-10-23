@@ -1,0 +1,14 @@
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\bin\Debug\VotingSystemApp.exe.config
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\bin\Debug\VotingSystemApp.exe
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\bin\Debug\VotingSystemApp.pdb
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.csprojResolveAssemblyReference.cache
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.AdminUI.resources
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.CandidateEntryUI.resources
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.MainUI.resources
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.NoOfWinnersUI.resources
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.Properties.Resources.resources
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.VoteCastUI.resources
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.csproj.GenerateResource.Cache
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.exe
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.pdb
+c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.UI.ResultOfVotingUI.resources
