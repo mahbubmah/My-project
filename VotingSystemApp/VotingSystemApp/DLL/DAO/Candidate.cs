@@ -19,7 +19,9 @@ namespace VotingSystemApp.DLL.DAO
             NoOfVote = noOfVote;
         }
 
-        public Candidate(string symbol, string name)
+
+
+        public Candidate(string symbol, string name):this()
         {
             Symbol = symbol;
             Name = name;

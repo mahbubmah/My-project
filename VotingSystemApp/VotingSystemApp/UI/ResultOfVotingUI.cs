@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VotingSystemApp.BLL;
+using VotingSystemApp.DLL.DAO;
+
 
 namespace VotingSystemApp.UI
 {
@@ -14,7 +17,12 @@ namespace VotingSystemApp.UI
     {
         public ResultOfVotingUI()
         {
+            VotingSystemBll aVotingSystemBll=new VotingSystemBll();
             InitializeComponent();
+            List<ResultBll> aResultBll=new List<ResultBll>();
+            aResultBll = aVotingSystemBll.GetResult();
+            gridResult.DataSource =aResultBll;
+            
         }
     }
 }

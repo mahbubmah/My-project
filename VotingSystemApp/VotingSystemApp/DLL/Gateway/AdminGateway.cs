@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using VotingSystemApp.BLL;
 using VotingSystemApp.DLL.DAO;
 
 namespace VotingSystemApp.DLL.Gateway
@@ -58,17 +59,20 @@ namespace VotingSystemApp.DLL.Gateway
 
         }
 
-        public string CastVote(Voter aVoter)
+        public string CastVote(Voter aVoter,Candidate aCandidate)
         {
             try
             {
-                connection.Open();
                 aVoter.NoOfVoteCasted = GetNoOfVoteCasted(aVoter.Email);
-                string query = string.Format("UPDATE t_Voter SET NoOfCastedVote=({0}) WHERE Email=('{1}')", aVoter.NoOfVoteCasted + 1, aVoter.Email);
+                connection.Open();
+                string query = string.Format("UPDATE t_Voter SET NoOfCastedVote={0} WHERE Email='{1}'", aVoter.NoOfVoteCasted + 1, aVoter.Email);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
+                string aquery = string.Format("UPDATE t_Candidate SET Vote={0} WHERE Symbol='{1}'", aCandidate.NoOfVote+1,aCandidate.Symbol);
+                SqlCommand acmd = new SqlCommand(aquery, connection);
+                acmd.ExecuteNonQuery();
                 connection.Close();
-                return "Vote Case Successful";
+                return "Vote Cast Successful";
             }
             catch (Exception exception)
             {
@@ -78,8 +82,9 @@ namespace VotingSystemApp.DLL.Gateway
             
         }
 
-        private int GetNoOfVoteCasted(string email)
+        public int GetNoOfVoteCasted(string email)
         {
+
             int i=0;
             connection.Open();
             string query = string.Format("SELECT * FROM t_Voter WHERE Email=('{0}')", email);
@@ -120,6 +125,73 @@ namespace VotingSystemApp.DLL.Gateway
             }
             connection.Close();
             return aListCandidate;
+        }
+
+        public int GetNoOfWinner()
+        {
+                connection.Open();
+                string query = string.Format("select * from t_NoOfWinners");
+                SqlCommand cmd = new SqlCommand(query, connection);
+                int i=(int) cmd.ExecuteScalar();
+                connection.Close();
+                return i ;
+            
+        }
+
+        public bool HasThisVoterOnTheList(Voter aVoter)
+        {
+            
+            connection.Open();
+            string query = string.Format("SELECT * FROM t_Voter WHERE Email=('{0}')", aVoter.Email);
+            SqlCommand cmd = new SqlCommand(query, connection);
+            SqlDataReader aReader = cmd.ExecuteReader();
+            bool HasRow = aReader.HasRows;
+            connection.Close();
+            if (HasRow)
+            {
+                return true;
+            }
+            
+
+            return false;
+        }
+
+        public List<ResultBll> GetResult()
+        {
+            ResultBll aResultBll;
+            int count = 0;
+            int j = GetNoOfWinner();
+            connection.Open();
+            string qurey = string.Format("SELECT * FROM t_Candidate ORDER BY Vote DESC");
+            SqlCommand cmd = new SqlCommand(qurey, connection);
+            SqlDataReader aReader = cmd.ExecuteReader();
+            List<ResultBll> aListResult = new List<ResultBll>();
+            bool HasRow = aReader.HasRows;
+            if (HasRow)
+            {
+                string loser = "Looser";
+                string winner = "Winner";
+                
+                while (aReader.Read())
+                {
+                    count++;
+                    aResultBll = new ResultBll();
+                    if (count <= j)
+                    {
+                        aResultBll.Result = winner;
+                    }
+                    else
+                    {
+                        aResultBll.Result = loser;
+                    }
+                    aResultBll.Symbol = aReader[0].ToString();
+                    aResultBll.Name = aReader[1].ToString();
+                    aResultBll.NoOfVote = (int)aReader[2];
+                    aListResult.Add(aResultBll);
+                }
+            }
+            connection.Close();
+            return aListResult;
         }
     }
 }

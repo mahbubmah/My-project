@@ -20,7 +20,7 @@ namespace VotingSystemApp
             InitializeComponent();
             GetCandidateInComboBox();
             comboCandidateList.DisplayMember = "Symbol";
-            comboCandidateList.ValueMember = "Name";
+            comboCandidateList.ValueMember = "Symbol";
 
         }
 
@@ -40,13 +40,15 @@ namespace VotingSystemApp
         {
             Voter aVoter=new Voter(txtEmail.Text);
             Candidate aCandidate=new Candidate();
-            string msg=aVotingSystemBll.CastVote(aVoter);
-            MessageBox.Show(msg);
+            
+            
 
             aCandidate = (Candidate)comboCandidateList.SelectedItem;
-            
 
-            
+            string msg=aVotingSystemBll.CastVote(aVoter, aCandidate);
+
+            MessageBox.Show(msg);
+
 
         }
     }

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ResultBll.cs" />
     <Compile Include="BLL\VotingSystemBll.cs" />
     <Compile Include="DLL\DAO\Candidate.cs" />
     <Compile Include="DLL\DAO\Voter.cs" />
