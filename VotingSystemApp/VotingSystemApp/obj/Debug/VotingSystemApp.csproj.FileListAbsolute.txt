@@ -15,3 +15,17 @@ c:\users\mjs\documents\visual studio 2013\Projects\VotingSystemApp\VotingSystemA
 C:\Users\MJS\Desktop\New folder\My-project\VotingSystemApp\VotingSystemApp\bin\Debug\VotingSystemApp.exe.config
 C:\Users\MJS\Desktop\New folder\My-project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.exe
 C:\Users\MJS\Desktop\New folder\My-project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.pdb
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\bin\Debug\VotingSystemApp.exe.config
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.exe
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.pdb
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\bin\Debug\VotingSystemApp.exe
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\bin\Debug\VotingSystemApp.pdb
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.AdminUI.resources
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.CandidateEntryUI.resources
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.MainUI.resources
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.NoOfWinnersUI.resources
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.Properties.Resources.resources
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.UI.ResultOfVotingUI.resources
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.VoteCastUI.resources
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.csproj.GenerateResource.Cache
+C:\Users\PC21\Desktop\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.csprojResolveAssemblyReference.cache

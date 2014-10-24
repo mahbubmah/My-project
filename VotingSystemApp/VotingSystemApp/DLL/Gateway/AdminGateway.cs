@@ -76,7 +76,6 @@ namespace VotingSystemApp.DLL.Gateway
             }
             catch (Exception exception)
             {
-
                 return exception.Message;
             }
             
