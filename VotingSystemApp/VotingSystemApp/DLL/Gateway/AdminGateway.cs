@@ -83,7 +83,6 @@ namespace VotingSystemApp.DLL.Gateway
 
         public int GetNoOfVoteCasted(string email)
         {
-
             int i=0;
             connection.Open();
             string query = string.Format("SELECT * FROM t_Voter WHERE Email=('{0}')", email);
@@ -94,7 +93,7 @@ namespace VotingSystemApp.DLL.Gateway
             {
                 while (aReader.Read())
                 {
-                    i = (int)aReader[1];
+                    i = (int)aReader[2];
                 }
             }
             connection.Close();
@@ -116,9 +115,9 @@ namespace VotingSystemApp.DLL.Gateway
                 while (aReader.Read())
                 {
                     aCandidate=new Candidate();
-                    aCandidate.Symbol = aReader[0].ToString();
-                    aCandidate.Name = aReader[1].ToString();
-                    aCandidate.NoOfVote = (int) aReader[2];
+                    aCandidate.Symbol = aReader[1].ToString();
+                    aCandidate.Name = aReader[2].ToString();
+                    aCandidate.NoOfVote = (int) aReader[3];
                     aListCandidate.Add(aCandidate);
                 }
             }
@@ -168,24 +167,14 @@ namespace VotingSystemApp.DLL.Gateway
             bool HasRow = aReader.HasRows;
             if (HasRow)
             {
-                string loser = "Looser";
-                string winner = "Winner";
-                
                 while (aReader.Read())
                 {
                     count++;
                     aResultBll = new ResultBll();
-                    if (count <= j)
-                    {
-                        aResultBll.Result = winner;
-                    }
-                    else
-                    {
-                        aResultBll.Result = loser;
-                    }
-                    aResultBll.Symbol = aReader[0].ToString();
-                    aResultBll.Name = aReader[1].ToString();
-                    aResultBll.NoOfVote = (int)aReader[2];
+                    aResultBll.Symbol = aReader[1].ToString();
+                    aResultBll.Name = aReader[2].ToString();
+                    aResultBll.GetResult((int) aReader[3],j,count);
+                    aResultBll.NoOfVote = (int)aReader[3];
                     aListResult.Add(aResultBll);
                 }
             }
