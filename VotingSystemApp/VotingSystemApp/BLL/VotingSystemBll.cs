@@ -65,5 +65,17 @@ namespace VotingSystemApp.BLL
             aAdminGateway = new AdminGateway();
             return aAdminGateway.GetResult();
         }
+
+        public bool IsCandiateSymbolExistInDatabase(Candidate aCandidate, List<Candidate> getAllCandidate)
+        {
+            foreach (Candidate candidate in getAllCandidate)
+            {
+                if (candidate == aCandidate)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

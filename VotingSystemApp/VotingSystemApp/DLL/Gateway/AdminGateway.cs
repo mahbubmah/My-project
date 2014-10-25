@@ -25,7 +25,13 @@ namespace VotingSystemApp.DLL.Gateway
         {
             try
             {
+                VotingSystemBll aVotingSystemBll=new VotingSystemBll();
                 aCandidate.NoOfVote = 0;
+                bool a = aVotingSystemBll.IsCandiateSymbolExistInDatabase(aCandidate, GetAllCandidate());
+                if (a)
+                {
+                    return "Symbol already exist in the system try another";
+                }
                 connection.Open();
                 string query = string.Format("INSERT INTO t_Candidate VALUES ('{0}','{1}',{2})",aCandidate.Symbol,aCandidate.Name,aCandidate.NoOfVote);
                 SqlCommand cmd = new SqlCommand(query, connection);
@@ -36,7 +42,7 @@ namespace VotingSystemApp.DLL.Gateway
             catch (Exception exception)
             {
 
-                return "Symbol already exist in the system try another";
+                return exception.Message;
             }
 
         }
@@ -173,7 +179,7 @@ namespace VotingSystemApp.DLL.Gateway
                     aResultBll = new ResultBll();
                     aResultBll.Symbol = aReader[1].ToString();
                     aResultBll.Name = aReader[2].ToString();
-                    aResultBll.GetResult((int) aReader[3],j,count);
+                    aResultBll.Result=aResultBll.GetResult((int) aReader[3],j,count);
                     aResultBll.NoOfVote = (int)aReader[3];
                     aListResult.Add(aResultBll);
                 }

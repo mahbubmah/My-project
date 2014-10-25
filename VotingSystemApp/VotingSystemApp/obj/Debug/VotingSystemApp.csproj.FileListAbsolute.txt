@@ -34,7 +34,6 @@ C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\Votin
 C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.pdb
 C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\bin\Debug\VotingSystemApp.exe
 C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\bin\Debug\VotingSystemApp.pdb
-C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.csprojResolveAssemblyReference.cache
 C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.AdminUI.resources
 C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.CandidateEntryUI.resources
 C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.MainUI.resources
@@ -43,3 +42,4 @@ C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\Votin
 C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.UI.ResultOfVotingUI.resources
 C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.VoteCastUI.resources
 C:\Users\PC21\Desktop\My-Project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.csproj.GenerateResource.Cache
+C:\Users\PC21\Desktop\My-project\VotingSystemApp\VotingSystemApp\obj\Debug\VotingSystemApp.csprojResolveAssemblyReference.cache
